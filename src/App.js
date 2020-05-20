@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header className="header">
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Enter City Name"
+            id="search-txt"
+          ></input>
+          <a id="search-btn" href="#">
+            <i className="fas fa-search"></i>
+          </a>
+        </div>
       </header>
+
+      <main id="main">
+        <div className="city-icon">
+          <div className="city-icon-holder">
+            <div id="city-name"></div>
+            <img src="" alt="" id="icon" />
+          </div>
+        </div>
+
+        <div className="temperature">
+          <div id="temp"></div>
+        </div>
+
+        <div className="humidity">
+          <div id="humidity-div"></div>
+        </div>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
