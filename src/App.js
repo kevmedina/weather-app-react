@@ -1,37 +1,18 @@
 import React from "react";
 import "./App.css";
+import Search from "./components/Search";
+import CityIcon from "./components/CityIcon";
+import Temperature from "./components/Temperature";
+import Humidity from "./components/Humidity";
 
 const App = () => {
   return (
     <div className="container">
-      <header className="header">
-        <div className="search">
-          <input
-            type="text"
-            placeholder="Enter City Name"
-            id="search-txt"
-          ></input>
-          <a id="search-btn" href="#">
-            <i className="fas fa-search"></i>
-          </a>
-        </div>
-      </header>
-
+      <Search />
       <main id="main">
-        <div className="city-icon">
-          <div className="city-icon-holder">
-            <div id="city-name"></div>
-            <img src="" alt="" id="icon" />
-          </div>
-        </div>
-
-        <div className="temperature">
-          <div id="temp"></div>
-        </div>
-
-        <div className="humidity">
-          <div id="humidity-div"></div>
-        </div>
+        <CityIcon />
+        <Temperature />
+        <Humidity />
       </main>
     </div>
   );
