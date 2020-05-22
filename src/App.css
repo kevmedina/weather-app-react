@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 80vw;
   height: 80vh;
   margin: 25vh auto;
   border-radius: 25px;
@@ -11,12 +11,14 @@ body {
 }
 
 .header {
-  height: 20%;
+  height: 100px;
   background-color: #ff9800;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   text-align: center;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #temp,
@@ -88,11 +90,17 @@ body {
   width: 40px;
   height: 40px;
   color: #eee;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #search-txt {
   color: red;
   height: 30px;
+  width: 300px;
+  font-size: 18px;
   border-radius: 10px;
   border-style: none;
   outline: none;
@@ -101,10 +109,10 @@ body {
   text-align: center;
 }
 
+.fa-search {
+  font-size: 1.5em;
+}
+
 .search {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  height: auto;
 }
