@@ -12,7 +12,7 @@ const Search = () => {
 
   const submitSearch = (e) => {
     e.preventDefault();
-    let searchLink = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${process.env.API_KEY}`;
+    let searchLink = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${process.env.REACT_APP_API_KEY}`;
 
     axios
       .get(searchLink)
@@ -27,7 +27,7 @@ const Search = () => {
   return (
     <div className="search">
       <header className="header">
-        <form onSubmit={submitSearch}>
+        <form onSubmit={(e) => submitSearch(e)}>
           <input
             type="text"
             placeholder="Enter City Name"

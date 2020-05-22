@@ -21,6 +21,10 @@ body {
   align-items: center;
 }
 
+.header form {
+  display: flex;
+}
+
 #temp,
 #humidity-div {
   font-family: "Courier New";
@@ -87,12 +91,13 @@ body {
 }
 
 #search-btn {
-  width: 40px;
-  height: 40px;
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 5px;
+
 }
 
 #search-txt {
@@ -110,6 +115,7 @@ body {
 
 .fa-search {
   font-size: 1.5em;
+  color: red;
 }
 
 .search {
