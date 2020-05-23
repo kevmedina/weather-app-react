@@ -55,7 +55,8 @@ body {
 }
 
 #icon {
-  width: 50%;
+  width: 200px;
+  height: auto;
 }
 
 #main {
@@ -97,7 +98,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 5px;
-
 }
 
 #search-txt {

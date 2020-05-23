@@ -1,9 +1,9 @@
 import React from "react";
 
-const Temperature = () => {
+const Temperature = ({ temperature }) => {
   return (
     <div className="temperature">
-      <div id="temp"></div>
+      <div id="temp">{temperature}</div>
     </div>
   );
 };

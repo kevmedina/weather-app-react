@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const CityIcon = () => {
-    return (
-        <div className="city-icon">
-          <div className="city-icon-holder">
-            <div id="city-name"></div>
-            <img src="" alt="" id="icon" />
-          </div>
-        </div>
-    )
-}
+const CityIcon = ({ weatherIcon }) => {
+  return (
+    <div className="city-icon">
+      <div className="city-icon-holder">
+        <div id="city-name"></div>
+        <img src={weatherIcon} alt="" id="icon" />
+      </div>
+    </div>
+  );
+};
 
-export default CityIcon
+export default CityIcon;
