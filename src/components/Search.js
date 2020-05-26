@@ -1,17 +1,17 @@
 import React from "react";
-import { AutoComplete } from "antd";
+// import { AutoComplete } from "antd";
 
-const options = [
-  {
-    value: "Fort Lauderdale",
-  },
-  {
-    value: "Miami",
-  },
-  {
-    value: "Orlando",
-  },
-];
+// const options = [
+//   {
+//     value: "Fort Lauderdale",
+//   },
+//   {
+//     value: "Miami",
+//   },
+//   {
+//     value: "Orlando",
+//   },
+// ];
 
 const Search = ({ inputValue, handleSearch, submitSearch }) => {
   return (
@@ -21,7 +21,7 @@ const Search = ({ inputValue, handleSearch, submitSearch }) => {
           <label for="search-input" id="label">
             Search Weather
           </label>
-          <AutoComplete
+          {/* <AutoComplete
             style={{
               width: 300,
             }}
@@ -33,16 +33,16 @@ const Search = ({ inputValue, handleSearch, submitSearch }) => {
               option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==
               -1
             }
-          />
+          /> */}
 
-          {/* <input
+          <input
             name="search-input"
             type="text"
             placeholder="Enter City Name"
             id="search-txt"
             value={inputValue}
             onChange={handleSearch}
-          ></input> */}
+          ></input>
 
           <button id="search-btn">
             <i className="fas fa-search"></i>
