@@ -7,29 +7,26 @@ import Humidity from "./components/Humidity";
 import axios from "axios";
 
 const App = () => {
-  const [search, setSearch] = useState("");
+  const [inputValue, setInputValue] = useState("");
   const [temperature, setTemperature] = useState(null);
   const [humidity, setHumidity] = useState(null);
   const [weatherIcon, SetIcon] = useState(null);
 
-  const handleSearch = (e) => {
-    const { value } = e.target;
-    console.log(value);
-    setSearch(value);
+  const handleSearch = (value) => {
+    setInputValue(value);
   };
 
   const submitSearch = (e) => {
     e.preventDefault();
-    let searchLink = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${process.env.REACT_APP_API_KEY}`;
+    let searchLink = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${process.env.REACT_APP_API_KEY}`;
 
     axios
       .get(searchLink)
       .then((weather) => {
-        console.log("City info: ", weather.data);
         const temp = Math.round(1.8 * parseInt(weather.data.main.temp - 273) + 32) + "°";
         const weatherIcon = `http://openweathermap.org/img/w/${weather.data.weather[0].icon}.png`;
-        setTemperature(temp);
         setHumidity(weather.data.main.humidity);
+        setTemperature(temp);
         SetIcon(weatherIcon);
       })
       .catch((err) =>
@@ -40,7 +37,7 @@ const App = () => {
   return (
     <div className="container">
       <Search
-        search={search}
+        inputValue={inputValue}
         handleSearch={handleSearch}
         submitSearch={submitSearch}
       />

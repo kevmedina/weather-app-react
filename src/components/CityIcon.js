@@ -5,7 +5,7 @@ const CityIcon = ({ weatherIcon }) => {
     <div className="city-icon">
       <div className="city-icon-holder">
         <div id="city-name"></div>
-        <img src={weatherIcon} alt="" id="icon" />
+        <img src={weatherIcon} alt="weather icon" id="icon" />
       </div>
     </div>
   );
